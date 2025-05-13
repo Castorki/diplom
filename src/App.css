@@ -1,38 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .App {
-  text-align: center;
+  background-color: bisque;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(193, 89, 15);
+  gap: 150px;
+}
+.header__link {
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__link {
+  padding: 15px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainPage {
+  padding-left: calc(50% - 500px);
+  padding-right: calc(50% - 500px);
+}
+
+.top {
+  background-image: url(../public/mainSerchingBackGround.jpg);
+  height: 563px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 200px;
+}
+.top__brand {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
+}
+.top__serch {
+  display: flex;
+  justify-content: start;
+  width: 360px;
+  padding: 15px 25px;
+  gap: 8px;
+  background-color: rgba(245, 245, 220, 0.5);
+  border-radius: 30px;
+}
+.top__serch_input {
+  width: 330px;
+  outline: none;
+  background: none;
+  border: none;
+}
+.top__serch_input::-moz-placeholder {
+  color: black;
+}
+.top__serch_input::placeholder {
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.popular {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.popular__name {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.popular__categories_category {
+  display: flex;
+  margin-bottom: 20px;
+}
+.popular__categories_category_button {
+  margin-top: 190px;
+  margin-left: 100px;
+  height: 41px;
+  padding: 10px;
+  border-radius: 40px;
+  border: 1px solid black;
+  background-color: rgba(241, 203, 113, 0.5);
+}
+.popular__categories_img {
+  width: 360px;
+  box-shadow: 11px 10px 4px rgba(0, 0, 0, 0.25);
+}
+.popular__categories_info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: center;
+}
+.popular__categories_info_description {
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer__info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  background-color: rgb(241, 193, 135);
 }
+.footer__navigation {
+  display: flex;
+  flex-direction: column;
+}
+.footer__about {
+  width: 300px;
+}
+.footer__copyright {
+  border-top: 2px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(193, 89, 15);
+}
+.footer__copyright_text {
+  color: #fff;
+}/*# sourceMappingURL=App.css.map */

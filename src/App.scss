@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.App {
+    background-color: bisque;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(193, 89, 15);
+    gap: 150px;
+
+    &__link {
+
+        color: #fff;
+    }
+}
+
+.header__link {
+    padding: 15px 20px;
+}
+
+.mainPage {
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+}
+
+.top {
+    background-image: url(../public/mainSerchingBackGround.jpg);
+    height: 563px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+
+    &__brand {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    &__serch {
+        display: flex;
+        justify-content: start;
+        width: 360px;
+        padding: 15px 25px;
+        gap: 8px;
+        background-color: rgb(245, 245, 220, 0.5);
+        border-radius: 30px;
+
+
+        &_input {
+            width: 330px;
+            outline: none;
+            background: none;
+            border: none;
+        }
+
+        &_input::placeholder {
+            color: black;
+        }
+    }
+}
+
+.popular {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__name {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__categories {
+
+        &_category {
+            display: flex;
+            margin-bottom: 20px;
+
+            &_button {
+                margin-top: 190px;
+                margin-left: 100px;
+                height: 41px;
+                padding: 10px;
+                border-radius: 40px;
+                border: 1px solid black;
+                background-color: rgba(241, 203, 113, 0.5);
+
+            }
+        }
+
+        &_img {
+            width: 360px;
+            box-shadow: 11px 10px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            justify-content: center;
+
+            &_description {
+                width: 300px;
+            }
+        }
+
+
+    }
+}
+
+.footer {
+    &__info {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        background-color: rgb(241, 193, 135);
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__about {
+        width: 300px;
+    }
+
+    &__copyright {
+        border-top: 2px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(193, 89, 15);
+
+        &_text {
+            color: #fff;
+        }
+    }
+}
