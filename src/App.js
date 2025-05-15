@@ -9,8 +9,11 @@ import { store } from './components/store/store';
 import { Products } from './components/pages/products/Products';
 import { Cart } from './components/pages/cart.js/Cart';
 import Profile from './components/pages/profile/Profile';
-import Register from './components/pages/profile/Register';
-import Login from './components/pages/profile/Login';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Strenghts from './components/strenghts/Strengths';
+import { SearchProducts } from './components/pages/serchProducts/SearchProducts';
+
 
 
 function App() {
@@ -22,6 +25,13 @@ function App() {
             <div className="App">
               <Header />
               <MainPage />
+              <Footer />
+            </div>
+          } />
+          <Route path='/search' element={
+            <div className="App">
+              <Header />
+              <SearchProducts />
               <Footer />
             </div>
           } />
@@ -60,6 +70,7 @@ function App() {
             <div className="App">
               <Header />
               <Login />
+              <Strenghts />
               <Footer />
             </div>
           } />
@@ -67,6 +78,7 @@ function App() {
             <div className="App">
               <Header />
               <Register />
+              <Strenghts />
               <Footer />
             </div>
           } />

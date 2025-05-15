@@ -1,6 +1,30 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
 * {
   margin: 0;
   padding: 0;
+}
+
+input {
+  outline: none;
 }
 
 a {
@@ -262,6 +286,33 @@ img {
   gap: 8px;
 }
 
+.addressForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.addressForm__input {
+  padding: 5px 3px;
+  border-radius: 10px;
+  background-color: rgb(227, 151, 58);
+  margin-left: 8px;
+  outline: none;
+}
+.addressForm__select {
+  background-color: rgb(227, 151, 58);
+  margin-bottom: 8px;
+  outline: none;
+}
+.addressForm__paymentWay {
+  display: flex;
+}
+.addressForm__button {
+  padding: 5px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: rgba(224, 132, 20, 0.5);
+}
+
 .notification {
   position: fixed;
   bottom: 20px;
@@ -275,23 +326,114 @@ img {
   animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.profile__unauthorized {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+
+.auth_links {
+  display: flex;
+  gap: 10px;
+  color: black;
+}
+.auth_links_text {
+  color: #085c0a;
+}
+
+.auth__button {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: rgba(224, 132, 20, 0.5);
+}
+.auth__button_text {
+  color: black;
+}
+
+.our__strengths {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba(224, 132, 20, 0.5);
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 30px;
+  border-bottom: 2px solid black;
+}
+.our__strengths .block {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.our__strengths .strength__heading {
+  margin-top: 29px;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.96px;
+  line-height: 24px;
+}
+.our__strengths .strength__info {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13.972px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.auth_container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authForm__formGroup {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.authForm__formGroup_input {
+  padding: 5px 3px;
+  border-radius: 10px;
+  background-color: rgb(227, 151, 58);
+  margin-left: 8px;
+}
+
+.profile__authorized {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.profile__authorized_button {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: rgba(224, 132, 20, 0.5);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+.search__input {
+  padding: 5px 3px;
+  border-radius: 10px;
+  background-color: rgb(227, 151, 58);
+  margin-top: 20px;
+}
+
+.search__input::-moz-placeholder {
+  color: black;
+}
+
+.search__input::placeholder {
+  color: black;
 }/*# sourceMappingURL=App.css.map */

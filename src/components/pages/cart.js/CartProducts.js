@@ -21,7 +21,7 @@ export const CartProducts = () => {
                             <button
                                 onClick={() => dispatch(decrementQuantity(product.id))}
                                 className="quantity__control_button"
-                                disabled={product.quantity <= 1} // Отключаем кнопку если количество = 1
+                                disabled={product.quantity <= 1}
                             >
                                 −
                             </button>

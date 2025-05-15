@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { loginSuccess } from '../../slices/authSlice';
+import { useNavigate, Link } from 'react-router-dom';
+import { loginSuccess } from '../slices/authSlice';
 
 
 const Register = () => {
@@ -59,14 +59,15 @@ const Register = () => {
     };
 
     return (
-        <div className="auth-container">
-            <div className="auth-form">
+        <div className="auth_container">
+            <div className="authForm">
                 <h2>Регистрация</h2>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
+                    <div className="authForm__formGroup">
                         <label htmlFor="name">Имя</label>
                         <input
+                            className='authForm__formGroup_input'
                             type="text"
                             id="name"
                             name="name"
@@ -74,12 +75,13 @@ const Register = () => {
                             onChange={handleChange}
                             required
                         />
-                        {errors.name && <span className="error-text">{errors.name}</span>}
+                        {errors.name && <span className="error_text">{errors.name}</span>}
                     </div>
 
-                    <div className="form-group">
+                    <div className="authForm__formGroup">
                         <label htmlFor="email">Email</label>
                         <input
+                            className='authForm__formGroup_input'
                             type="email"
                             id="email"
                             name="email"
@@ -87,12 +89,13 @@ const Register = () => {
                             onChange={handleChange}
                             required
                         />
-                        {errors.email && <span className="error-text">{errors.email}</span>}
+                        {errors.email && <span className="error_text">{errors.email}</span>}
                     </div>
 
-                    <div className="form-group">
+                    <div className="authForm__formGroup">
                         <label htmlFor="password">Пароль</label>
                         <input
+                            className='authForm__formGroup_input'
                             type="password"
                             id="password"
                             name="password"
@@ -100,12 +103,13 @@ const Register = () => {
                             onChange={handleChange}
                             required
                         />
-                        {errors.password && <span className="error-text">{errors.password}</span>}
+                        {errors.password && <span className="error_text">{errors.password}</span>}
                     </div>
 
-                    <div className="form-group">
+                    <div className="authForm__formGroup">
                         <label htmlFor="confirmPassword">Подтвердите пароль</label>
                         <input
+                            className='authForm__formGroup_input'
                             type="password"
                             id="confirmPassword"
                             name="confirmPassword"
@@ -114,17 +118,17 @@ const Register = () => {
                             required
                         />
                         {errors.confirmPassword && (
-                            <span className="error-text">{errors.confirmPassword}</span>
+                            <span className="error_text">{errors.confirmPassword}</span>
                         )}
                     </div>
 
-                    <button type="submit" className="auth-button">
+                    <button type="submit" className="auth__button">
                         Зарегистрироваться
                     </button>
                 </form>
 
-                <div className="auth-links">
-                    <p>Уже есть аккаунт? <a href="/login">Войти</a></p>
+                <div className="auth_links">
+                    <p>Уже есть аккаунт? <Link to={"/login"}><span className='auth_links_text'>Войти</span></Link></p>
                 </div>
             </div>
         </div>

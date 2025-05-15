@@ -3,6 +3,9 @@ import categories from '../slices/categoriesSlicer';
 import products from '../slices/productsSlicer';
 import cartProducts from '../slices/cartProductsSlicer';
 import authReducer from '../slices/authSlice';
+import strenghts from '../slices/strenghtsSlicer';
+import userData from '../slices/userDataSlicer';
+import newProducts from '../slices/newProducts';
 
 
 export const store = configureStore({
@@ -10,7 +13,10 @@ export const store = configureStore({
         categories: categories,
         products: products,
         cartProducts: cartProducts,
-        auth: authReducer
+        auth: authReducer,
+        strenghts: strenghts,
+        userData: userData,
+        newProducts: newProducts
 
     }
 })

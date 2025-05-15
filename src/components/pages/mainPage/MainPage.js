@@ -1,12 +1,12 @@
 import React from 'react'
 import { Serching } from './Serching'
-import { PopularCategories } from './PopularCategories'
+import { NewsProduct } from './NewProducts'
 
 export const MainPage = () => {
     return (
         <div className='mainPage'>
             <Serching />
-            <PopularCategories />
+            <NewsProduct />
         </div>
     )
 }
