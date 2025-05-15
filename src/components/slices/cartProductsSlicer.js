@@ -27,7 +27,7 @@ const cartProductsSlicer = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            const existingProduct = state.find(item => item.id === action.payload.id);
+            const existingProduct = state.find(item => item.title === action.payload.title);
             if (existingProduct) {
                 existingProduct.quantity += 1;
             } else {
@@ -53,9 +53,13 @@ const cartProductsSlicer = createSlice({
             const newState = state.filter(item => item.id !== action.payload);
             saveCartToLocalStorage(newState);
             return newState;
+        },
+        clearCart: () => {
+            localStorage.removeItem('cart');
+            return [];
         }
     }
 });
 
-export const { addToCart, incrementQuantity, decrementQuantity, removeProduct } = cartProductsSlicer.actions;
+export const { addToCart, incrementQuantity, decrementQuantity, removeProduct, clearCart } = cartProductsSlicer.actions;
 export default cartProductsSlicer.reducer;

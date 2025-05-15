@@ -65,61 +65,77 @@ const Register = () => {
 
                 <form onSubmit={handleSubmit}>
                     <div className="authForm__formGroup">
-                        <label htmlFor="name">Имя</label>
-                        <input
-                            className='authForm__formGroup_input'
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                        {errors.name && <span className="error_text">{errors.name}</span>}
+                        <div>
+                            <label htmlFor="name">Имя</label>
+                            <input
+                                className='authForm__formGroup_input'
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            {errors.name && <span className="error_text">{errors.name}</span>}
+                        </div>
                     </div>
 
                     <div className="authForm__formGroup">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            className='authForm__formGroup_input'
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                        {errors.email && <span className="error_text">{errors.email}</span>}
+                        <div>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                className='authForm__formGroup_input'
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            {errors.email && <span className="error_text">{errors.email}</span>}
+                        </div>
                     </div>
 
                     <div className="authForm__formGroup">
-                        <label htmlFor="password">Пароль</label>
-                        <input
-                            className='authForm__formGroup_input'
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            required
-                        />
-                        {errors.password && <span className="error_text">{errors.password}</span>}
+                        <div>
+                            <label htmlFor="password">Пароль</label>
+                            <input
+                                className='authForm__formGroup_input'
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            {errors.password && <span className="error_text">{errors.password}</span>}
+                        </div>
                     </div>
 
                     <div className="authForm__formGroup">
-                        <label htmlFor="confirmPassword">Подтвердите пароль</label>
-                        <input
-                            className='authForm__formGroup_input'
-                            type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            value={formData.confirmPassword}
-                            onChange={handleChange}
-                            required
-                        />
-                        {errors.confirmPassword && (
-                            <span className="error_text">{errors.confirmPassword}</span>
-                        )}
+                        <div>
+                            <label htmlFor="confirmPassword">Подтвердите пароль</label>
+                            <input
+                                className='authForm__formGroup_input'
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            {errors.confirmPassword && (
+                                <span className="error_text">{errors.confirmPassword}</span>
+                            )}
+                        </div>
                     </div>
 
                     <button type="submit" className="auth__button">

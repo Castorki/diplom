@@ -11,7 +11,7 @@ function Strenghts() {
                     <h3 className='strength__heading'>{item.name}</h3>
                     <p className='strength__info'>{item.description}</p>
                 </div>
-            ))};
+            ))}
         </article>
     );
 }

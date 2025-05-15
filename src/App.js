@@ -7,7 +7,7 @@ import { MainPage } from './components/pages/mainPage/MainPage';
 import { Catalog } from './components/pages/catalog/Catalog';
 import { store } from './components/store/store';
 import { Products } from './components/pages/products/Products';
-import { Cart } from './components/pages/cart.js/Cart';
+import { Cart } from './components/pages/cart/Cart';
 import Profile from './components/pages/profile/Profile';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';

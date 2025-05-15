@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-
-
+import { useSelector, useDispatch } from 'react-redux';
+import { clearCart } from '../../slices/cartProductsSlicer';
 
 export const AddressForm = () => {
-    const { isAuthenticated } = useSelector(state => state.auth);
     const [deliveryMethod, setDeliveryMethod] = useState('selfPickUp');
     const [city, setCity] = useState('');
+    const [showSuccess, setShowSuccess] = useState(false);
+    const dispatch = useDispatch();
+    const [name, setName] = useState('');
+    const [deliveryAddress, setDeliveryAddress] = useState('');
+    const [paymentMethod, setPaymentMethod] = useState('cash');
 
     const cartItemsCount = useSelector(state =>
         state.cartProducts.reduce((total, item) => total + item.quantity, 0)
@@ -18,25 +21,32 @@ export const AddressForm = () => {
         'Брест': ['ул. Гоголя, 8', 'ул. Московская, 30']
     };
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if (cartItemsCount > 0) {
+            dispatch(clearCart());
+            setShowSuccess(true);
+            resetForm();
+            setTimeout(() => setShowSuccess(false), 3000);
             console.log('Форма отправлена');
         }
     };
 
-    if (!isAuthenticated) {
-        return (
-            <div>
-                <p>Для оформления заказа, пожалуйста, войдти в аккаунт или зарегистрируйтесь</p>
-            </div>
-        );
-    }
+    const resetForm = () => {
+        setDeliveryMethod('selfPickUp');
+        setCity('');
+        setName('');
+        setDeliveryAddress('');
+        setPaymentMethod('cash');
+    };
 
     return (
         <div className="addressForm">
+            {showSuccess && (
+                <div className="order__success_notification">
+                    Заказ успешно оформлен! Спасибо за покупку!
+                </div>
+            )}
             <div className="delivery_method">
                 <div>
                     <input
@@ -65,12 +75,14 @@ export const AddressForm = () => {
 
             <form onSubmit={handleSubmit}>
                 <div className="form_group">
-                    <label htmlFor="name">Имя:</label>
+                    <label htmlFor="deliveryAddress">Имя:</label>
                     <input
                         className='addressForm__input'
                         type="text"
                         id="name"
                         name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                     />
                 </div>
@@ -100,6 +112,8 @@ export const AddressForm = () => {
                                 className='addressForm__select'
                                 id="pickupAddress"
                                 name="pickupAddress"
+                                value={deliveryAddress}
+                                onChange={(e) => setDeliveryAddress(e.target.value)}
                                 disabled={!city}
                                 required
                             >
@@ -119,6 +133,8 @@ export const AddressForm = () => {
                                 type="text"
                                 id="deliveryAddress"
                                 name="deliveryAddress"
+                                value={deliveryAddress}
+                                onChange={(e) => setDeliveryAddress(e.target.value)}
                                 required
                             />
                         </div>
@@ -132,7 +148,8 @@ export const AddressForm = () => {
                                         id="cash"
                                         name="paymentMethod"
                                         value="cash"
-                                        defaultChecked
+                                        checked={paymentMethod === 'cash'}
+                                        onChange={() => setPaymentMethod('cash')}
                                     />
                                     <label htmlFor="cash">Наличные</label>
                                 </div>
@@ -142,6 +159,8 @@ export const AddressForm = () => {
                                         id="card"
                                         name="paymentMethod"
                                         value="card"
+                                        checked={paymentMethod === 'card'}
+                                        onChange={() => setPaymentMethod('card')}
                                     />
                                     <label htmlFor="card">Картой</label>
                                 </div>
