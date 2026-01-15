@@ -28,10 +28,10 @@ export const NewsProduct = () => {
                     <div key={news.id} className='popular__categories_category'>
                         <img className='popular__categories_img' src={news.img} alt={news.title}></img>
                         <div className='popular__categories_info'>
-                            <h2 className='popular__categories_info_name'>{news.title}</h2>
-                            <p className='popular__categories_info_description'>{news.description}</p>
+                            <h2 className='popular__info_name'>{news.title}</h2>
+                            <p className='popular__info_description'>{news.description}</p>
                         </div>
-                        <button onClick={() => handleAddToCart(news)} type='button' className='popular__categories_category_button'><span className='popular__categories_category_button_text'>Добавить в корзину</span></button>
+                        <button onClick={() => handleAddToCart(news)} type='button' className='popular__category_button'><span className='popular__category_buttonText'>Добавить в корзину</span></button>
                     </div>
                 ))}
 

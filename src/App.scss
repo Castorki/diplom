@@ -140,10 +140,13 @@ img {
             display: flex;
             margin-bottom: 20px;
 
-            &_button {
-                margin-top: 190px;
+            .popular__category_button {
+                display: grid;
+                align-items: center;
+                align-self: flex-end;
+                width: 115px;
                 margin-left: 100px;
-                height: 41px;
+                max-height: 60px;
                 padding: 10px;
                 border-radius: 40px;
                 border: 1px solid black;
@@ -153,7 +156,7 @@ img {
         }
 
         &_img {
-            width: 360px;
+            width: 345px;
             box-shadow: 11px 10px 4px rgba(0, 0, 0, 0.25);
         }
 
@@ -161,9 +164,10 @@ img {
             display: flex;
             flex-direction: column;
             margin-left: 50px;
+            max-width: 40%;
             justify-content: center;
 
-            &_description {
+            .popular__info_name {
                 width: 300px;
             }
         }
@@ -214,32 +218,31 @@ img {
     &__title {
         margin-bottom: 30px;
     }
+}
 
-    &__categories {
+.categories {
 
-        display: grid;
-        grid-template-columns: repeat(3, 360px);
-        gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 10px;
 
-        &_category {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 15px 25px;
-            background-color: rgb(239, 134, 49);
-            border-radius: 30px;
+    &__category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 15px 25px;
+        background-color: rgb(239, 134, 49);
+        border-radius: 30px;
 
-            &_button {
-                padding: 10px;
-                border-radius: 40px;
-                border: 1px solid black;
-                background-color: rgba(255, 228, 196, 0.5);
-            }
+        &_button {
+            padding: 10px;
+            border-radius: 40px;
+            border: 1px solid black;
+            background-color: rgba(255, 228, 196, 0.5);
         }
     }
-
 }
 
 .products {
@@ -318,26 +321,26 @@ img {
         margin-top: 30px;
 
     }
+}
 
-    &__products {
-        display: grid;
-        grid-template-columns: repeat(2, 200px);
-        gap: 10px;
+.cartProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 10px;
 
-        &_product {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 8px;
-            padding: 15px 25px;
-            background-color: rgb(239, 134, 49);
-            border-radius: 30px;
+    &__product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding: 15px 25px;
+        background-color: rgb(239, 134, 49);
+        border-radius: 30px;
 
-            &_delete {
-                border: none;
-                background: none;
-                width: 20px;
-            }
+        &_delete {
+            border: none;
+            background: none;
+            width: 20px;
         }
     }
 }
@@ -568,12 +571,12 @@ img {
     .catalog {
         padding-left: calc(50% - 360px);
         padding-right: calc(50% - 360px);
+    }
 
-        &__categories {
+    .categories {
 
-            grid-template-columns: repeat(2, 360px);
+        grid-template-columns: repeat(2, 360px);
 
-        }
     }
 
     .our__strengths {
@@ -597,9 +600,9 @@ img {
             &_category {
                 flex-direction: column;
                 gap: 12px;
+                max-width: 575px;
 
-                &_button {
-                    margin-top: 0;
+                .popular__category_button {
                     margin-left: 0;
                 }
             }
@@ -621,10 +624,10 @@ img {
             padding-left: calc(50% - 250px);
             padding-right: calc(50% - 250px);
         }
+    }
 
-        &__products {
-            grid-template-columns: repeat(3, 200px);
-        }
+    .cartProducts {
+        grid-template-columns: repeat(3, 200px);
     }
 
     .products {
@@ -667,10 +670,10 @@ img {
 
         padding-left: calc(50% - 145px);
         padding-right: calc(50% - 145px);
+    }
 
-        &__categories {
-            grid-template-columns: repeat(1, 300px);
-        }
+    .categories {
+        grid-template-columns: repeat(1, 300px);
     }
 
     .products {
@@ -689,13 +692,11 @@ img {
             padding-left: calc(50% - 150px);
             padding-right: calc(50% - 150px);
         }
-
-
-        &__products {
-            grid-template-columns: repeat(1, 240px);
-        }
     }
 
+    .cartProducts {
+        grid-template-columns: repeat(1, 240px);
+    }
 
     .contacts {
         &_img {

@@ -7,13 +7,13 @@ export const CartProducts = () => {
     const cartProducts = useSelector(state => state.cartProducts);
 
     return (
-        <div className='cart__products'>
+        <div className='cartProducts'>
             {cartProducts.length > 0 ? (
                 cartProducts.map(product => (
-                    <div key={product.id} className='cart__products_product'>
-                        <h3 className='cart__products_product_title'>{product.title}</h3>
-                        <img className='cart__products_product_img' src={product.img} alt={product.title} />
-                        <p className='cart__products_product_price'>
+                    <div key={product.id} className='cartProducts__product'>
+                        <h3 className='cartProducts__product_title'>{product.title}</h3>
+                        <img className='cartProducts__product_img' src={product.img} alt={product.title} />
+                        <p className='cartProducts__product_price'>
                             Цена: {product.price} BYN
                         </p>
                         <div className="quantity__control">
@@ -35,14 +35,14 @@ export const CartProducts = () => {
                         </div>
                         <button
                             onClick={() => dispatch(removeProduct(product.id))}
-                            className='cart__products_product_delete'
+                            className='cartProducts__product_delete'
                         >
                             <img src='delete.svg' alt="Удалить" />
                         </button>
                     </div>
                 ))
             ) : (
-                <p className='cart__empty'>Корзина пуста</p>
+                <p className='cartProducts__empty'>Корзина пуста</p>
             )}
         </div>
     );
