@@ -13,6 +13,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Strenghts from './components/strenghts/Strengths';
 import { SearchProducts } from './components/pages/serchProducts/SearchProducts';
+import { ScrollRestoration } from './components/ScrollRestoration';
 
 
 
@@ -22,65 +23,84 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={
-            <div className="App">
-              <Header />
-              <MainPage />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+              <div className="App">
+                <Header />
+                <MainPage />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
           <Route path='/search' element={
-            <div className="App">
-              <Header />
-              <SearchProducts />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+              <div className="App">
+                <Header />
+                <SearchProducts />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
           <Route path='/catalog' element={
-            <div className="App">
-              <Header />
-              <Catalog />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+              <div className="App">
+                <Header />
+                <Catalog />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
           <Route path='/cart' element={
+            <ScrollRestoration>
 
-            <div className="App">
-              <Header />
-              <Cart />
-              <Footer />
-            </div>
-
+              <div className="App">
+                <Header />
+                <Cart />
+                <Footer />
+              </div>
+            </ScrollRestoration>
 
           } />
           <Route path='/profile' element={
-            <div className="App">
-              <Header />
-              <Profile />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+
+              <div className="App">
+                <Header />
+                <Profile />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
           <Route path='/products' element={
-            <div className="App">
-              <Header />
-              <Products />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+              <div className="App">
+                <Header />
+                <Products />
+                <Footer />
+              </div>
+            </ScrollRestoration>
+
           } />
           <Route path='/login' element={
-            <div className="App">
-              <Header />
-              <Login />
-              <Strenghts />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+
+              <div className="App">
+                <Header />
+                <Login />
+                <Strenghts />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
           <Route path='/register' element={
-            <div className="App">
-              <Header />
-              <Register />
-              <Strenghts />
-              <Footer />
-            </div>
+            <ScrollRestoration>
+
+              <div className="App">
+                <Header />
+                <Register />
+                <Strenghts />
+                <Footer />
+              </div>
+            </ScrollRestoration>
           } />
         </Routes>
       </BrowserRouter>
