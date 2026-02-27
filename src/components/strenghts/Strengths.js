@@ -7,7 +7,7 @@ function Strenghts() {
         <article className="our__strengths center">
             {strenghts.map(item => (
                 <div key={item.id} className='block'>
-                    <img className='icon' src={item.image} />
+                    <img className='icon' src={item.image} alt=''/>
                     <h3 className='strength__heading'>{item.name}</h3>
                     <p className='strength__info'>{item.description}</p>
                 </div>
