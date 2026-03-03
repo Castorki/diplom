@@ -34,7 +34,7 @@
 
 ## Демо
 
-Посмотреть живую версию можно здесь: [https://inspiring-concha-afa530.netlify.app/](ссылка)
+Посмотреть живую версию можно здесь: [https://admirable-kleicha-d629d0.netlify.app/](ссылка)
 
 ## Доступные скрипты
 
