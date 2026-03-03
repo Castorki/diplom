@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Магазин выпечки "CookieShop"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Скриншот главной страницы](public/cookieShopScreenshot.png)
 
-## Available Scripts
+## О проекте
 
-In the project directory, you can run:
+Это учебный проект магазина по продаже выпечки. 
+Реализован функционал сортировки, оформления заявки о покупке, строки поиска для нахождения нужной продукции, добавления продукта в корзину. Имеется личный кабинет.
+
+## Функционал
+
+- Оформление заказа
+- Поиск продукции с помощью поисковой строки
+- Авторизация в личный кабинет пользователя
+- Регистрация
+- Сохранение списка покупок в localeStorage
+
+## Стек технологий
+
+- **Frontend:** React, Redux Toolkit, JavaScript, React Router
+- **Стили:** SCSS
+- **Сборка:** WebPack
+
+## Установка и запуск
+
+1.  Склонировать репозиторий:
+    `git clone https://github.com/твой-логин/название-репозитория.git`
+2.  Перейти в папку с проектом:
+    `cd название-репозитория`
+3.  Установить зависимости:
+    `npm install`
+4.  Запустить проект:
+    `npm start`
+
+## Демо
+
+Посмотреть живую версию можно здесь: [https://inspiring-concha-afa530.netlify.app/](ссылка)
+
+## Доступные скрипты
+
+В директории проекта вы можете выполнить следующую команду: 
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запускает приложение в режиме разработки.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Страница будет перезагружаться при внесении изменений.\
+Вы также можете увидеть ошибки линтинга в консоли.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускает средство запуска тестов в интерактивном режиме отслеживания изменений.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Собирает приложение для продакшена в папку `build`.
+В продакшен-режиме корректно упаковывает React и оптимизирует сборку для достижения наилучшей производительности.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Сборка минифицирована, а имена файлов содержат хеши.
+Ваше приложение готово к развертыванию!
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Примечание: это операция в один конец. После выполнения команды `eject` вы не сможете вернуться назад!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Если вас не устраивают выбранные инструменты сборки и параметры конфигурации, вы можете в любой момент выполнить команду `eject`. Эта команда удалит единственную зависимость сборки из вашего проекта.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Вместо этого она скопирует все файлы конфигурации и транзитивные зависимости (webpack, Babel, ESLint и т. д.) прямо в ваш проект, так что вы получите полный контроль над ними. Все команды, кроме `eject`, по-прежнему будут работать, но они будут указывать на скопированные скрипты, чтобы вы могли их изменить. На этом этапе вы остаетесь один на один со своими проблемами.
